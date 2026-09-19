@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="决战吧 - 深度攻略与竞技对决指南。为您提供热门游戏对决技巧、战术分析、装备搭配及玩家社区讨论，助您在竞技场中脱颖而出，决胜千里。">
+    <meta name="keywords" content="决战吧, 竞技游戏攻略, 对决技巧, 玩家社区">
+    <title>决战吧 - 竞技对决攻略与玩家社区</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #00cec9;
+            --dark-bg: #1e1e2e;
+            --card-bg: #2d2d44;
+            --text-main: #ffffff;
+            --text-muted: #b2bec3;
+            --border-radius: 12px;
+            --spacing: 20px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: rgba(30, 30, 46, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-muted);
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-main);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            padding: 8px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            padding: 80px 0;
+            text-align: center;
+            overflow: hidden;
+            background: radial-gradient(circle at center, rgba(108, 92, 231, 0.2) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--accent-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .tag {
+            padding: 5px 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* 统计数据栏 */
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px 0;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* 内容区块 */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .more-link {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .more-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* 游戏分类网格 */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .game-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .game-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background-color: #3d3d5c;
+        }
+
+        .game-content {
+            padding: 20px;
+        }
+
+        .game-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .game-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .game-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .meta-tag {
+            background-color: rgba(0, 206, 201, 0.1);
+            color: var(--accent-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* 攻略列表 */
+        .guide-list {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .guide-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .guide-card:hover {
+            background-color: #35354f;
+        }
+
+        .guide-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .guide-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .guide-info p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .sidebar {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .sidebar-list li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar-list a {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .sidebar-list a:hover {
+            color: var(--accent-color);
+        }
+
+        .sidebar-list span {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        /* 常见问题 FAQ */
+        .faq-section {
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+        }
+
+        .faq-question:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+            display: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+            font-size: 20px;
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #151520;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .nav-links {
+                display: none; /* 简化处理，移动端隐藏导航 */
+            }
+
+            .guide-list {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">决战吧</div>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">热门对决</a>
+                <a href="#">战术库</a>
+                <a href="#">装备搭配</a>
+                <a href="#">社区论坛</a>
+            </nav>
+            <a href="#" class="cta-btn">立即加入</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>决战吧<br><span>主宰竞技场</span></h1>
+                <p>汇集全网最新游戏对决攻略、职业分析与实战技巧。无论你是新手还是老手，在这里都能找到制胜关键，开启你的王者之路。</p>
+                <div class="hero-tags">
+                    <span class="tag">MOBA竞技</span>
+                    <span class="tag">FPS射击</span>
+                    <span class="tag">格斗游戏</span>
+                    <span class="tag">策略卡牌</span>
+                </div>
+                <a href="#guides" class="cta-btn" style="padding: 12px 30px; font-size: 16px;">查看攻略</a>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <div class="container">
+            <section class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">精选游戏</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10k+</span>
+                    <span class="stat-label">深度攻略</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2M+</span>
+                    <span class="stat-label">活跃玩家</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">实时更新</span>
+                </div>
+            </section>
+        </div>
+
+        <!-- Game Categories -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">热门对决游戏</h2>
+                <a href="#" class="more-link">查看全部 &rarr;</a>
+            </div>
+            <div class="games-grid">
+                <!-- Game Card 1 -->
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/game1/400/250" alt="星际争霸" class="game-img">
+                    <div class="game-content">
+                        <h3 class="game-title">星际争霸：终极对决</h3>
+                        <p class="game-desc">探索快节奏的星际战斗，掌握兵种克制与地图控制，在高端局中稳操胜券。</p>
+                        <div class="game-meta">
+                            <span class="meta-tag">策略</span>
+                            <span>热度: 98%</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Game Card 2 -->
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/game2/400/250" alt="幻影格斗" class="game-img">
+                    <div class="game-content">
+                        <h3 class="game-title">幻影格斗：连招教学</h3>
+                        <p class="game-desc">从入门到精通的连招指南，解析隐藏机制，助你在1v1对决中一击必杀。</p>
+                        <div class="game-meta">
+                            <span class="meta-tag">动作</span>
+                            <span>热度: 95%</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Game Card 3 -->
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/game3/400/250" alt="荒野求生" class="game-img">
+                    <div class="game-content">
+                        <h3 class="game-title">荒野求生：决赛圈指南</h3>
+                        <p class="game-desc">吃鸡技巧全解析，听声辨位、缩圈预判、伏地魔战术详解。</p>
+                        <div class="game-meta">
+                            <span class="meta-tag">射击</span>
+                            <span>热度: 92%</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Game Card 4 -->
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/game4/400/250" alt="魔法对决" class="game-img">
+                    <div class="game-content">
+                        <h3 class="game-title">魔法对决：元素控制</h3>
+                        <p class="game-desc">构建你的魔法师阵容，研究元素相克关系，在团战中掌控全场。</p>
+                        <div class="game-meta">
+                            <span class="meta-tag">RPG</span>
+                            <span>热度: 88%</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Guides & Sidebar -->
+        <section id="guides" class="container">
+            <div class="section-header">
+                <h2 class="section-title">深度战术库</h2>
+            </div>
+            <div class="guide-list">
+                <div class="guide-main">
+                    <div class="guide-card">
+                        <div class="guide-icon">⚔️</div>
+                        <div class="guide-info">
+                            <h3>如何提升个人操作水平？</h3>
+                            <p>操作是竞技游戏的基石。本文将详细拆解鼠标设置、灵敏度调整以及APM训练方法，帮助你突破操作瓶颈。</p>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-icon">🧠</div>
+                        <div class="guide-info">
+                            <h3>团队配合中的沟通艺术</h3>
+                            <p>在5v5或3v3的对决中，有效的沟通比枪法更重要。学习如何使用简短术语传递关键信息，减少团队失误。</p>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-icon">🗺️</div>
+                        <div class="guide-info">
+                            <h3>地图机制与资源争夺</h3>
+                            <p>掌握地图中的关键点位（如野区刷新点、视野盲区），利用机制优势在资源争夺战中占据先机。</p>
+                        </div>
+                    </div>
+                </div>
+                <aside class="sidebar">
+                    <h3>热门话题</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="#">最强上分英雄推荐 <span>Hot</span></a></li>
+                        <li><a href="#">版本T0级装备解析 <span>New</span></a></li>
+                        <li><a href="#">反制敌方主流战术 <span>Top</span></a></li>
+                        <li><a href="#">职业选手操作复盘 <span>View</span></a></li>
+                        <li><a href="#">新手入门避坑指南 <span>Tip</span></a></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container faq-section">
+            <div class="section-header">
+                <h2 class="section-title">玩家常见问题</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <div class="faq-question">新手如何快速上手竞技对决游戏？</div>
+                    <div class="faq-answer">建议先选择一个操作相对简单、容错率高的英雄或角色进行练习，熟悉游戏的基础技能和地图布局，再逐步尝试高难度的操作和战术配合。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">遇到连跪（连续失败）怎么办？</div>
+                    <div class="faq-answer">连跪通常意味着当前状态不佳或遇到了实力悬殊的对手。建议暂停游戏进行休息，调整心态，分析上一局输掉的原因，避免在情绪波动时继续对局。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何查看最新的版本更新内容？</div>
+                    <div class="faq-answer">您可以关注我们的“版本公告”板块，或者加入玩家社区讨论，这里会第一时间汇总官方发布的补丁说明和平衡性调整。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">决战吧</div>
+                    <p style="color: var(--text-muted); font-size: 14px; margin-top: 15px;">
+                        致力于为玩家提供最专业、最及时的竞技游戏攻略与社区支持。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>内容栏目</h4>
+                    <ul>
+                        <li><a href="#">热门攻略</a></li>
+                        <li><a href="#">英雄图鉴</a></li>
+                        <li><a href="#">装备大全</a></li>
+                        <li><a href="#">赛事资讯</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社区互动</h4>
+                    <ul>
+                        <li><a href="#">官方论坛</a></li>
+                        <li><a href="#">玩家交流</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">合作申请</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">关于决战吧</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 决战吧 All Rights Reserved. 仅供展示使用。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 交互逻辑
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                
+                // 切换当前项状态
+                parent.classList.toggle('active');
+                
+                // 可选：如果希望实现手风琴效果（点击一个关闭其他），取消下面注释
+                /*
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== parent) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                */
+            });
+        });
+
+        // 简单的平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+                                                   </html>
