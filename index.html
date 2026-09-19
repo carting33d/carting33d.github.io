@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春晚漏点-春晚精彩集锦与独家回顾</title>
+    <meta name="description" content="提供2025年及历年春晚漏点、精彩片段、完整版高清视频及幕后花絮。实时更新春晚看点，涵盖歌舞、小品、语言类节目精彩瞬间与官方修复版资源。">
+    <meta name="keywords" content="春晚漏点,春晚精彩集锦,春晚视频,春晚完整版,春晚看点,春晚幕后">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #c8102e;
+            --accent-color: #ff4757;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-secondary: #747d8c;
+            --border-radius: 8px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 32px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            padding: var(--spacing-sm) 0;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2f3542 0%, #1e272e 100%);
+            color: white;
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: var(--spacing-lg);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(255,255,255,0.1);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .tag:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-width);
+            margin: var(--spacing-lg) auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Section Styling */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #e1e1e1;
+            margin-left: var(--spacing-md);
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-icon {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            background-color: rgba(200, 16, 46, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .card-content {
+            padding: var(--spacing-md);
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .badge {
+            background-color: #ffeaa7;
+            color: #d35400;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Sidebar */
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-lg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid #f1f1f1;
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: #eee;
+            color: #666;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.85rem;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: #ff4757; color: white; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #ffa502; color: white; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #2ed573; color: white; }
+
+        .rank-info {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .rank-count {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Info & Help Section */
+        .info-section {
+            background-color: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .info-item h3 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .info-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2f3542;
+            color: #a4b0be;
+            padding: var(--spacing-lg) 0 var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+            }
+
+            nav ul {
+                gap: var(--spacing-md);
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                order: -1; /* Show sidebar first on mobile if needed, or remove */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
+            </svg>
+            春晚<span>看点</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">热门集锦</a></li>
+                <li><a href="#">语言类节目</a></li>
+                <li><a href="#">幕后花絮</a></li>
+                <li><a href="#">历年回顾</a></li>
+            </ul>
+        </nav>
+        <button class="search-btn" aria-label="搜索">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>春晚漏点 & 精彩瞬间</h1>
+        <p>精选历年春晚高光时刻、未播片段与幕后花絮，带你重温经典，不错过任何精彩瞬间。</p>
+        <div class="hero-tags">
+            <span class="tag">2025最新</span>
+            <span class="tag">歌舞表演</span>
+            <span class="tag">小品相声</span>
+            <span class="tag">魔术揭秘</span>
+            <span class="tag">幕后花絮</span>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+    <!-- Video Grid -->
+    <section>
+        <div class="section-title">
+            <h2>本周热门推荐</h2>
+            <a href="#" style="font-size: 0.9rem; color: var(--primary-color);">查看更多 &rarr;</a>
+        </div>
+        <div class="video-grid">
+            <!-- Card 1 -->
+            <article class="video-card">
+                <div class="thumbnail">
+                    <img src="https://picsum.photos/seed/spring1/400/225" alt="春晚舞台背景">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">2025春晚开场舞《龙腾盛世》完整版高清回放</h3>
+                    <div class="card-meta">
+                        <span>时长: 08:45</span>
+                        <span class="badge">高清</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="video-card">
+                <div class="thumbnail">
+                    <img src="https://picsum.photos/seed/spring2/400/225" alt="小品现场">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">沈腾马丽春晚小品《春晚制作趣事》爆笑片段合集</h3>
+                    <div class="card-meta">
+                        <span>时长: 05:12</span>
+                        <span class="badge">爆笑</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="video-card">
+                <div class="thumbnail">
+                    <img src="https://picsum.photos/seed/spring3/400/225" alt="魔术揭秘">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">刘谦魔术揭秘：硬币消失全过程与手法解析</h3>
+                    <div class="card-meta">
+                        <span>时长: 12:30</span>
+                        <span class="badge">揭秘</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="video-card">
+                <div class="thumbnail">
+                    <img src="https://picsum.photos/seed/spring4/400/225" alt="幕后花絮">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">春晚后台直击：明星休息室真实状态与彩排花絮</h3>
+                    <div class="card-meta">
+                        <span>时长: 06:20</span>
+                        <span class="badge">花絮</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="video-card">
+                <div class="thumbnail">
+                    <img src="https://picsum.photos/seed/spring5/400/225" alt="舞蹈表演">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">舞蹈《只此青绿》春晚舞台版：极致东方美学</h3>
+                    <div class="card-meta">
+                        <span>时长: 04:55</span>
+                        <span class="badge">唯美</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="video-card">
+                <div class="thumbnail">
+                    <img src="https://picsum.photos/seed/spring6/400/225" alt="语言类节目">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">岳云鹏孙越相声《新编打灯谜》台词逐句解析</h3>
+                    <div class="card-meta">
+                        <span>时长: 09:10</span>
+                        <span class="badge">解析</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <div class="layout-grid">
+        <!-- Sidebar -->
+        <aside class="main-content">
+            <div class="info-section">
+                <div class="section-title"><h2>关于春晚精彩回顾</h2></div>
+                <p style="margin-bottom: 16px; color: #555;">每年除夕，全球华人都会围坐在一起收看春节联欢晚会。除了台前的精彩表演，观众往往对<strong>春晚漏点</strong>（未播片段、幕后花絮、彩排瞬间）抱有极大的兴趣。本站致力于收集整理这些珍贵资源，为您呈现一个立体的春晚。</p>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-icon">📺</div>
+                        <h3>高清修复</h3>
+                        <p>提供历年春晚4K修复版及未删减片段。</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🎭</div>
+                        <h3>幕后揭秘</h3>
+                        <p>演员排练趣事、导演组花絮与道具解析。</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">⚡</div>
+                        <h3>快速直达</h3>
+                        <p>按年份、节目类型一键检索精彩内容。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="sidebar-title">年度热门节目排行</h3>
+                <ul class="rank-list">
+                    <li>
+                        <span class="rank-num">1</span>
+                        <span class="rank-info">小品《坑》全场爆笑高光时刻</span>
+                        <span class="rank-count">2.5w</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">2</span>
+                        <span class="rank-info">魔术《彩蛋》揭秘全过程</span>
+                        <span class="rank-count">2.1w</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">3</span>
+                        <span class="rank-info">歌曲《上春山》舞台高能剪辑</span>
+                        <span class="rank-count">1.8w</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">4</span>
+                        <span class="rank-info">舞蹈《锦鲤》唯美慢动作回放</span>
+                        <span class="rank-count">1.5w</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">5</span>
+                        <span class="rank-info">相声《年味》经典台词金句</span>
+                        <span class="rank-count">1.2w</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3 class="sidebar-title">分类导航</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="#">🔴 语言类节目</a></li>
+                    <li><a href="#">🎵 歌舞类节目</a></li>
+                    <li><a href="#">🃏 魔术杂技</a></li>
+                    <li><a href="#">🎭 传统文化</a></li>
+                    <li><a href="#">🎪 晚会花絮</a></li>
+                    <li><a href="#">🏆 历年榜单</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="sidebar-title">常见问题</h3>
+                <div style="font-size: 0.9rem;">
+                    <p style="margin-bottom: 10px;"><strong>Q: 这些视频是哪里来的？</strong></p>
+                    <p style="margin-bottom: 10px; color: #666;">A: 主要来源于网络公开资源整理，旨在为观众提供便利的观看体验。</p>
+                    <p style="margin-bottom: 10px;"><strong>Q: 视频清晰度如何？</strong></p>
+                    <p style="margin-bottom: 10px; color: #666;">A: 我们尽可能筛选高清或标清版本，部分经典老片受限于原始画质。</p>
+                    <p><strong>Q: 可以下载观看吗？</strong></p>
+                    <p style="color: #666;">A: 目前提供在线播放服务，具体视版权方政策而定。</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">免责声明</a>
+            <a href="#">版权声明</a>
+            <a href="#">联系方式</a>
+        </div>
+        <p class="copyright">Copyright © 2025 春晚看点. All Rights Reserved. 本站仅做内容整理与展示，不存储任何视频文件。</p>
+    </div>
+</footer>
+
+</body>
+                      </html>
