@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="冒险王2手游官方网站，提供正版下载、新手攻略、职业介绍、游戏资讯及玩家社区交流。畅玩高自由度沙盒冒险，探索未知世界，打造你的专属史诗。">
+    <meta name="keywords" content="冒险王2手游官方网站,冒险王2,手游下载,冒险游戏,沙盒冒险">
+    <title>冒险王2手游官方网站-正版下载与新手攻略指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff9800;
+            --primary-hover: #f57c00;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-dark: #1a1a1a;
+            --bg-card: #252525;
+            --text-light: #f5f5f5;
+            --text-gray: #b0b0b0;
+            --font-main: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-light);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-gray);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 152, 0, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(to bottom, rgba(26,26,26,0.3), var(--bg-dark)), url('https://picsum.photos/seed/adventure2_hero/1920/1080.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-item h3 {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin: 0;
+        }
+
+        /* Features Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-color: rgba(255, 152, 0, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        /* Game Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            aspect-ratio: 16/9;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .gallery-overlay p {
+            font-size: 12px;
+            color: var(--primary-color);
+        }
+
+        /* Character Classes */
+        .classes-section {
+            background-color: #1f1f1f;
+        }
+
+        .classes-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .class-card {
+            flex: 1 1 300px;
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .class-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .class-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .class-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .class-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .class-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .class-info p {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .class-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 4px 10px;
+            background-color: rgba(255, 152, 0, 0.1);
+            color: var(--primary-color);
+            border-radius: 20px;
+        }
+
+        /* Download Section */
+        .download-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+            text-align: center;
+            border-radius: 20px;
+            margin: 40px 20px;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .download-title {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .download-desc {
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-download {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+        }
+
+        .btn-download:hover {
+            background-color: var(--primary-hover);
+            transform: scale(1.05);
+        }
+
+        .btn-download svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* News & Updates */
+        .news-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .news-item {
+            display: flex;
+            gap: 20px;
+            background-color: var(--bg-card);
+            padding: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .news-item:hover {
+            background-color: #2f2f2f;
+        }
+
+        .news-date {
+            flex-shrink: 0;
+            text-align: center;
+            min-width: 60px;
+        }
+
+        .news-date .day {
+            display: block;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .news-date .month {
+            font-size: 12px;
+            color: var(--text-gray);
+            text-transform: uppercase;
+        }
+
+        .news-content h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .news-content p {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .news-link {
+            color: var(--primary-color);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .sidebar {
+            background-color: var(--bg-card);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 12px;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: #ffd700; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #c0c0c0; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #cd7f32; }
+
+        .rank-title {
+            font-size: 14px;
+            flex-grow: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 60px 0 20px;
+            margin-top: 80px;
+            border-top: 1px solid #333;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col p {
+            color: var(--text-gray);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>冒险王2</span>手游
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#features">游戏特色</a></li>
+                    <li><a href="#classes">职业介绍</a></li>
+                    <li><a href="#news">游戏资讯</a></li>
+                    <li><a href="#download">下载中心</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">用户登录</a>
+                <a href="#download" class="btn btn-primary">立即下载</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>探索无界，<br><span>重燃冒险梦想</span></h1>
+                    <p>高自由度沙盒冒险RPG，打破次元壁，与亿万玩家同屏竞技。在这个充满未知的奇幻世界中，打造你的专属史诗传奇。</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>500万+</h3>
+                            <p>注册玩家</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>4.9</h3>
+                            <p>玩家评分</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100+</h3>
+                            <p>自由地图</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心特色</h2>
+                    <p>不止于冒险，更是自由的创造与挑战</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">⚔️</div>
+                        <h3>高自由度战斗</h3>
+                        <p>实时技能连招，多样化武器搭配，体验爽快淋漓的打击感，自定义你的战斗风格。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🗺️</div>
+                        <h3>开放世界探索</h3>
+                        <p>广袤无垠的地图，从极寒冰原到热带雨林，隐藏着无数遗迹与宝藏等待发掘。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>自由建造系统</h3>
+                        <p>不仅是战斗，更是建设。利用收集的资源，打造属于你的城堡、基地和防御工事。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>万人同屏竞技</h3>
+                        <p>加入公会，参与大型跨服战役。在军团战中策略布局，与好友并肩作战。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Gallery -->
+        <section class="section" style="background-color: #1f1f1f;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>精彩画面</h2>
+                    <p>沉浸式视觉体验，高清画质还原真实世界</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/game1/400/225" alt="游戏场景">
+                        <div class="gallery-overlay">
+                            <h4>幽暗森林</h4>
+                            <p>探索未知区域</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/game2/400/225" alt="战斗场景">
+                        <div class="gallery-overlay">
+                            <h4>史诗战役</h4>
+                            <p>万人同屏激战</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/game3/400/225" alt="角色特写">
+                        <div class="gallery-overlay">
+                            <h4>英雄集结</h4>
+                            <p>个性职业选择</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/game4/400/225" alt="建筑特写">
+                        <div class="gallery-overlay">
+                            <h4>宏伟城池</h4>
+                            <p>自由建造建造</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Character Classes -->
+        <section id="classes" class="section classes-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>职业介绍</h2>
+                    <p>选择你的战斗方式，开启传奇之旅</p>
+                </div>
+                <div class="classes-container">
+                    <div class="class-card">
+                        <div class="class-img">
+                            <img src="https://picsum.photos/seed/warrior/400/300" alt="战士">
+                        </div>
+                        <div class="class-info">
+                            <h3>狂暴战士</h3>
+                            <p>近战物理输出，拥有极高的生存能力和爆发伤害，是冲锋陷阵的不二之选。</p>
+                            <div class="class-tags">
+                                <span class="tag">高生命</span>
+                                <span class="tag">近战</span>
+                                <span class="tag">坦克</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-img">
+                            <img src="https://picsum.photos/seed/mage/400/300" alt="法师">
+                        </div>
+                        <div class="class-info">
+                            <h3>元素法师</h3>
+                            <p>掌控火焰与冰霜的奥术大师，能够释放毁灭性的范围法术，掌控战场局势。</p>
+                            <div class="class-tags">
+                                <span class="tag">远程</span>
+                                <span class="tag">法术</span>
+                                <span class="tag">爆发</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-img">
+                            <img src="https://picsum.photos/seed/archer/400/300" alt="弓箭手">
+                        </div>
+                        <div class="class-info">
+                            <h3>暗影猎手</h3>
+                            <p>身法灵活的远程刺客，擅长在阴影中穿梭，给予敌人致命一击。</p>
+                            <div class="class-tags">
+                                <span class="tag">敏捷</span>
+                                <span class="tag">潜行</span>
+                                <span class="tag">暴击</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="container">
+            <div class="download-section">
+                <h2 class="download-title">立即下载，开启冒险</h2>
+                <p class="download-desc">支持Android与iOS双端互通，随时随地畅玩。新用户注册即送豪华首充礼包，助你快速变强。</p>
+                <div class="download-buttons">
+                    <a href="#" class="btn btn-download">
+                        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Android 下载
+                    </a>
+                    <a href="#" class="btn btn-download">
+                        <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.07-3.11-1.05.05-2.31.71-3.06 1.59-.67.79-1.25 2.05-1.1 3.13 1.17.09 2.35-.74 3.09-1.61"/></svg>
+                        iOS 下载
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News & Updates -->
+        <section id="news" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>最新资讯</h2>
+                    <p>关注官方动态，掌握第一手游戏情报</p>
+                </div>
+                <div class="news-grid">
+                    <div class="news-list">
+                        <article class="news-item">
+                            <div class="news-date">
+                                <span class="day">12</span>
+                                <span class="month">10月</span>
+                            </div>
+                            <div class="news-content">
+                                <h4><a href="#">“暗黑降临”版本更新公告：全新副本与BOSS来袭</a></h4>
+                                <p>各位冒险者请注意，我们将于本周五凌晨进行停服维护，全新“暗黑降临”资料片正式上线...</p>
+                                <a href="#" class="news-link">阅读全文 &rarr;</a>
+                            </div>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-date">
+                                <span class="day">08</span>
+                                <span class="month">10月</span>
+                            </div>
+                            <div class="news-content">
+                                <h4><a href="#">国庆双节活动回顾：精彩瞬间与获奖名单公布</a></h4>
+                                <p>感谢大家参与国庆双节活动，本次活动的参与人数再创新高，以下是部分精彩截图和获奖名单...</p>
+                                <a href="#" class="news-link">阅读全文 &rarr;</a>
+                            </div>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-date">
+                                <span class="day">05</span>
+                                <span class="month">10月</span>
+                            </div>
+                            <div class="news-content">
+                                <h4><a href="#">职业平衡性调整说明：优化战士与法师体验</a></h4>
+                                <p>为了提升游戏的公平性和竞技性，我们针对部分职业进行了数值调整，具体调整内容如下...</p>
+                                <a href="#" class="news-link">阅读全文 &rarr;</a>
+                            </div>
+                        </article>
+                    </div>
+                    <aside class="sidebar">
+                        <h3>热门排行</h3>
+                        <ul class="rank-list">
+                            <li>
+                                <span class="rank-num">1</span>
+                                <span class="rank-title">全服第一公会“荣耀战神”招募令</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">2</span>
+                                <span class="rank-title">限时活动：7日登录送限定时装</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">3</span>
+                                <span class="rank-title">新地图“遗忘之海”探索指南</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">4</span>
+                                <span class="rank-title">玩家投稿：平民玩家的最强装备搭配</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">5</span>
+                                <span class="rank-title">公会战积分规则详解</span>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <span>冒险王2</span>手游
+                    </div>
+                    <p>致力于为玩家提供最优质的沙盒冒险体验，打造真实、自由、互动的数字世界。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>玩家支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">账号安全</a></li>
+                        <li><a href="#">游戏论坛</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <p>扫描二维码关注官方微信，获取最新资讯。</p>
+                    <div style="background:#333; width: 100px; height: 100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #666; font-size: 12px;">
+                        二维码占位
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 冒险王2手游官方网站. All Rights Reserved. 仅供展示，非真实游戏官网。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
